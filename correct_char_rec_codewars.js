@@ -11,7 +11,19 @@ I is misinterpreted as 1
 The test cases contain numbers only by mistake.
 */
 
-function correct(string)
-{
-	// your code here
+const correct = (string) => {
+	let newStr = '';
+	for(let i = 0; i < string.length; i++) {
+		if(string[i] === '5') {
+			newStr += 'S';
+		} else if (string[i] === '0') {
+			newStr += 'O';
+		} else if (string[i] === '1') {
+			newStr += 'I';
+		} else {
+			newStr += string[i];
+		}
+	}
+	
+	return newStr;
 }
